@@ -910,6 +910,28 @@ button { font: inherit; }
   max-width: 720px;
   margin-left: auto; margin-right: auto;
 }
+.footer__credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245, 235, 221, .55);
+  border: 1px solid rgba(245, 235, 221, .12);
+  border-radius: 999px;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.footer__credit svg { display: block; color: var(--gold); transition: transform .2s ease; }
+.footer__credit:hover {
+  color: var(--cream);
+  border-color: var(--gold);
+  background: rgba(244, 194, 74, .06);
+}
+.footer__credit:hover svg { transform: translate(2px, -2px) rotate(8deg); }
 
 /* ===== Toast ===== */
 .toast {
