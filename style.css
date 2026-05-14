@@ -233,6 +233,21 @@ button { font: inherit; }
 .nav.is-open .nav__burger span:nth-child(2) { opacity: 0; }
 .nav.is-open .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ===== Pre-hero GIF banner ===== */
+.hero-pre {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  overflow: hidden;
+  line-height: 0;
+}
+.hero-pre img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== Hero ===== */
 .hero {
   position: relative;
