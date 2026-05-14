@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TRUNC - The Troll Uncle Memecoin on Solana</title>
+<meta name="description" content="$TRUNC - The legendary troll uncle living his best life on Solana. Cigars, cocktails, and pure degeneracy. Join the family." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TRUNC - The Troll Uncle Memecoin on Solana" />
+<meta property="og:description" content="$TRUNC - The legendary troll uncle living his best life on Solana. Cigars, cocktails, and pure degeneracy." />
+<meta property="og:image" content="banner.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TRUNC - The Troll Uncle Memecoin on Solana" />
+<meta name="twitter:description" content="$TRUNC - The legendary troll uncle living his best life on Solana." />
+<meta name="twitter:image" content="banner.jpg" />
+
+<link rel="icon" type="image/jpeg" href="logo.jpg" />
+<link rel="apple-touch-icon" href="logo.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Film grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">
+      <img src="logo.jpg" alt="TRUNC logo" />
+      <span>TRUNC</span>
+    </a>
+
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">How to Buy</a></li>
+      <li><a href="#memes">Memes</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#chart">Chart</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <a href="https://x.com/" target="_blank" rel="noopener" class="nav__x" aria-label="Follow on X">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a href="https://pump.fun/" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Buy $TRUNC</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="home">
+  <div class="hero__bg" style="background-image: url('banner.jpg');"></div>
+  <div class="hero__overlay"></div>
+
+  <svg class="palm palm--left" viewBox="0 0 100 200" aria-hidden="true">
+    <path d="M50 200 L48 100 L52 100 L50 200 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q20 80 5 90 Q25 95 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q80 80 95 90 Q75 95 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q30 70 10 60 Q35 80 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q70 70 90 60 Q65 80 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q45 65 35 40 Q50 70 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q55 65 65 40 Q50 70 50 100 Z" fill="#0a0e27"/>
+  </svg>
+  <svg class="palm palm--right" viewBox="0 0 100 200" aria-hidden="true">
+    <path d="M50 200 L48 100 L52 100 L50 200 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q20 80 5 90 Q25 95 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q80 80 95 90 Q75 95 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q30 70 10 60 Q35 80 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q70 70 90 60 Q65 80 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q45 65 35 40 Q50 70 50 100 Z" fill="#0a0e27"/>
+    <path d="M50 100 Q55 65 65 40 Q50 70 50 100 Z" fill="#0a0e27"/>
+  </svg>
+
+  <div class="hero__content">
+    <h1 class="hero__title glitch" data-text="MEET TRUNC">MEET TRUNC</h1>
+    <p class="hero__subtitle">The Troll Uncle Who Never Quits The Grind</p>
+    <p class="hero__desc">Living the high life on Solana. Cigars, cocktails, and pure trolling energy. Welcome to paradise, degens.</p>
+
+    <div class="ca-box" data-ca-box>
+      <span class="ca-box__label">CONTRACT ADDRESS</span>
+      <code class="ca-box__addr" id="caAddr">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+      <button class="ca-box__copy" data-copy="caAddr" aria-label="Copy contract address">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span>COPY</span>
+      </button>
+    </div>
+
+    <div class="hero__ctas">
+      <a href="https://pump.fun/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">BUY ON PUMP.FUN</a>
+      <a href="#chart" class="btn btn--ghost btn--lg">VIEW CHART</a>
+    </div>
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+</header>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="container">
+    <span class="section__eyebrow">WHO IS TRUNC?</span>
+    <h2 class="section__title">THE LEGEND OF UNCLE TRUNC</h2>
+
+    <div class="about__grid">
+      <div class="about__text">
+        <p>They say he came from the streets of Vice City with nothing but a half-smoked cigar and a Solana wallet. Now Uncle Trunc owns three yachts, a private beach, and a permanent reservation at every tiki bar from Miami to the Moon.</p>
+        <p>Why does he troll? Because life is too short to be serious. While the suits debate fundamentals, Uncle Trunc is sipping mojitos and watching the candles green. He doesn't chase pumps — pumps chase <em>him</em>.</p>
+        <p class="about__motto">"Diamond hands, golden chains, never explain."</p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__icon">🍹</span>
+            <span class="stat__num">9,999,999</span>
+            <span class="stat__label">Cocktails Sipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">🚬</span>
+            <span class="stat__num">∞</span>
+            <span class="stat__label">Cigars Smoked</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">😈</span>
+            <span class="stat__num">ALL</span>
+            <span class="stat__label">Normies Trolled</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">💎</span>
+            <span class="stat__num">ON</span>
+            <span class="stat__label">Diamond Hands</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__img">
+        <div class="sticker sticker--tilt-r">
+          <img src="trunc.jpg" alt="Uncle Trunc" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How To Buy -->
+<section class="section how" id="how">
+  <div class="container">
+    <span class="section__eyebrow">MISSION BRIEFING</span>
+    <h2 class="section__title">GET YOUR BAG, ROOKIE</h2>
+
+    <div class="how__grid">
+      <article class="mission mission--1">
+        <span class="mission__num">01</span>
+        <h3>GET A WALLET</h3>
+        <p>Download Phantom or Solflare. No wallet, no party. Don't be the guy at the door without an invite.</p>
+      </article>
+      <article class="mission mission--2">
+        <span class="mission__num">02</span>
+        <h3>LOAD UP ON SOL</h3>
+        <p>Buy SOL on Coinbase, Binance, or your favorite CEX. Send it to your wallet. Don't lose your seed phrase, kid.</p>
+      </article>
+      <article class="mission mission--3">
+        <span class="mission__num">03</span>
+        <h3>HIT PUMP.FUN</h3>
+        <p>Go to pump.fun, paste the CA, connect wallet. Double-check the address. We don't do refunds in this town.</p>
+      </article>
+      <article class="mission mission--4">
+        <span class="mission__num">04</span>
+        <h3>APE IN</h3>
+        <p>Set your slippage, click buy, welcome to the family. WAGMI. Or NGMI. The cigars taste the same either way.</p>
+      </article>
+    </div>
+
+    <div class="how__cta">
+      <a href="https://pump.fun/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">PROCEED TO PUMP.FUN →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Chart -->
+<section class="section chart" id="chart">
+  <div class="container">
+    <span class="section__eyebrow">LIVE FEED</span>
+    <h2 class="section__title">WATCH THE CHART PUMP</h2>
+
+    <div class="chart__frame">
+      <!-- TODO: replace "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" with the real CA once launched -->
+      <iframe
+        src="https://dexscreener.com/solana/xxxxxxxxxxxxxxxxxxxxxxxxxxxxx?embed=1&theme=dark&trades=0&info=0"
+        title="DexScreener live chart for $TRUNC"
+        loading="lazy"
+        allowfullscreen></iframe>
+    </div>
+    <p class="chart__hint">Chart will go live once the token is launched on pump.fun.</p>
+  </div>
+</section>
+
+<!-- Memes -->
+<section class="section memes" id="memes">
+  <div class="container container--wide">
+    <span class="section__eyebrow">CERTIFIED BANGERS</span>
+    <h2 class="section__title">THE TRUNC ARCHIVES</h2>
+    <p class="memes__hint">← SCROLL →</p>
+  </div>
+
+  <div class="memes__rail" id="memesRail">
+    <div class="sticker sticker--tilt-1"><img src="trunc.jpg"  alt="Trunc meme 1" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-2"><img src="trunc1.jpg" alt="Trunc meme 2" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-3"><img src="trunc2.jpg" alt="Trunc meme 3" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-4"><img src="trunc3.jpg" alt="Trunc meme 4" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-1"><img src="trunc4.jpg" alt="Trunc meme 5" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-2"><img src="trunc5.jpg" alt="Trunc meme 6" loading="lazy" /></div>
+    <div class="sticker sticker--tilt-3"><img src="trunc6.jpg" alt="Trunc meme 7" loading="lazy" /></div>
+  </div>
+</section>
+
+<!-- Roadmap -->
+<section class="section roadmap" id="roadmap">
+  <div class="container">
+    <span class="section__eyebrow">*subject to chaos*</span>
+    <h2 class="section__title">THE MASTERPLAN</h2>
+
+    <div class="roadmap__list">
+      <article class="phase phase--left">
+        <div class="phase__card">
+          <span class="phase__tag">PHASE 1</span>
+          <h3>WAKE UP ☀️</h3>
+          <ul>
+            <li>Light a cigar</li>
+            <li>Pour a cocktail</li>
+            <li>Launch on pump.fun</li>
+            <li>Confuse the normies</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="phase phase--right">
+        <div class="phase__card">
+          <span class="phase__tag">PHASE 2</span>
+          <h3>SPREAD THE CHAOS 🌴</h3>
+          <ul>
+            <li>Achieve maximum troll energy</li>
+            <li>Get featured on CT</li>
+            <li>1,000 holders of pure degenerates</li>
+            <li>Buy a yacht (with paper-hands money)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="phase phase--left">
+        <div class="phase__card">
+          <span class="phase__tag">PHASE 3</span>
+          <h3>WORLD DOMINATION 🍹</h3>
+          <ul>
+            <li>Replace all world leaders with Trunc memes</li>
+            <li>Solana mainnet renamed to "Truncnet"</li>
+            <li>CZ tweets about us (he doesn't know why)</li>
+            <li>Every beach is now a Trunc beach</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="phase phase--right">
+        <div class="phase__card">
+          <span class="phase__tag">PHASE 4</span>
+          <h3>ASCENSION 👑</h3>
+          <ul>
+            <li>Trunc becomes sentient</li>
+            <li>Trolls reach the moon (literally)</li>
+            <li>Time becomes meaningless</li>
+            <li>Uncle Trunc retires to his private island made of $TRUNC tokens</li>
+            <li>We all make it. Or we don't. The trolling continues forever.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA / Footer -->
+<footer class="footer" id="footer">
+  <svg class="palm palm--footer-l" viewBox="0 0 100 200" aria-hidden="true">
+    <path d="M50 200 L48 100 L52 100 L50 200 Z" fill="#000"/>
+    <path d="M50 100 Q20 80 5 90 Q25 95 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q80 80 95 90 Q75 95 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q30 70 10 60 Q35 80 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q70 70 90 60 Q65 80 50 100 Z" fill="#000"/>
+  </svg>
+  <svg class="palm palm--footer-r" viewBox="0 0 100 200" aria-hidden="true">
+    <path d="M50 200 L48 100 L52 100 L50 200 Z" fill="#000"/>
+    <path d="M50 100 Q20 80 5 90 Q25 95 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q80 80 95 90 Q75 95 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q30 70 10 60 Q35 80 50 100 Z" fill="#000"/>
+    <path d="M50 100 Q70 70 90 60 Q65 80 50 100 Z" fill="#000"/>
+  </svg>
+
+  <div class="container footer__inner">
+    <h2 class="footer__title">JOIN THE TRUNC FAMILY</h2>
+    <p class="footer__sub">No suits. No rules. Just vibes and a cigar.</p>
+
+    <a href="https://x.com/" target="_blank" rel="noopener" class="btn btn--x btn--lg">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      FOLLOW ON X
+    </a>
+
+    <div class="ca-box ca-box--footer" data-ca-box>
+      <span class="ca-box__label">CONTRACT ADDRESS</span>
+      <code class="ca-box__addr" id="caAddrFooter">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+      <button class="ca-box__copy" data-copy="caAddrFooter" aria-label="Copy contract address">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span>COPY</span>
+      </button>
+    </div>
+
+    <p class="footer__disclaimer">
+      © 2026 TRUNC. This is not financial advice. This is not even good advice. We're not advisors. We're trolls.<br/>
+      $TRUNC is a meme coin with no intrinsic value or expectation of financial return. Just vibes.
+    </p>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
