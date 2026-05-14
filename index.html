@@ -64,18 +64,33 @@
 
 <!-- Hero -->
 <header class="hero" id="home">
-  <div class="hero__bg" style="background-image: url('banner.jpg');"></div>
-  <div class="hero__vignette" aria-hidden="true"></div>
+  <div class="hero__deco" aria-hidden="true"></div>
 
   <div class="hero__content">
-    <span class="hero__kicker" data-reveal>VICE CITY · SOLANA · 2026</span>
-    <h1 class="hero__title" data-reveal>
-      <span class="hero__line hero__line--1">UNCLE</span>
-      <span class="hero__line hero__line--2">TRUNC</span>
-    </h1>
-    <p class="hero__tag" data-reveal>The original troll uncle. Cigars in one hand, candles in the other.</p>
+    <div class="hero__head">
+      <span class="hero__kicker" data-reveal>VICE CITY · SOLANA · 2026</span>
+      <h1 class="hero__title" data-reveal>
+        <span class="hero__line hero__line--1">UNCLE</span>
+        <span class="hero__line hero__line--2">TRUNC</span>
+      </h1>
+      <p class="hero__tag" data-reveal>The original troll uncle. Cigars in one hand, candles in the other.</p>
+    </div>
 
-    <div class="hero__row" data-reveal>
+    <figure class="hero__feature" data-reveal>
+      <div class="hero__feature-frame">
+        <img src="banner.jpg" alt="Uncle Trunc reclining on a beach chair at sunset with a cigar and a cocktail" />
+        <span class="hc hc--tl" aria-hidden="true"></span>
+        <span class="hc hc--tr" aria-hidden="true"></span>
+        <span class="hc hc--bl" aria-hidden="true"></span>
+        <span class="hc hc--br" aria-hidden="true"></span>
+      </div>
+      <figcaption>
+        <span>FEATURE PRESENTATION</span>
+        <span>SIDE A · VOL. 01</span>
+      </figcaption>
+    </figure>
+
+    <div class="hero__bar" data-reveal>
       <div class="ca-box">
         <span class="ca-box__label">CA</span>
         <code class="ca-box__addr" id="caAddr">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
@@ -87,16 +102,12 @@
           <span>Copy</span>
         </button>
       </div>
-    </div>
-
-    <div class="hero__ctas" data-reveal>
-      <a href="https://pump.fun/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">BUY ON PUMP.FUN</a>
-      <a href="#chart" class="btn btn--ghost btn--lg">VIEW CHART</a>
+      <div class="hero__ctas">
+        <a href="https://pump.fun/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">BUY ON PUMP.FUN</a>
+        <a href="#chart" class="btn btn--ghost btn--lg">VIEW CHART</a>
+      </div>
     </div>
   </div>
-
-  <div class="hero__corner hero__corner--tl"><span>EST.</span><strong>2026</strong></div>
-  <div class="hero__corner hero__corner--br"><span>SIDE A</span><strong>VOL. 01</strong></div>
 </header>
 
 <!-- Marquee Ticker -->
