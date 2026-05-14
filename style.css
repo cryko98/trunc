@@ -233,19 +233,34 @@ button { font: inherit; }
 .nav.is-open .nav__burger span:nth-child(2) { opacity: 0; }
 .nav.is-open .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ===== Pre-hero GIF banner ===== */
+/* ===== Pre-hero video banner ===== */
 .hero-pre {
+  position: relative;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding-top: var(--nav-h);
   background: var(--bg);
   overflow: hidden;
   line-height: 0;
+  border-bottom: 5px solid var(--rust);
+  box-shadow: 0 5px 0 0 var(--gold), 0 12px 28px rgba(0, 0, 0, .55);
 }
-.hero-pre img {
+.hero-pre video {
   width: 100%;
   height: auto;
   display: block;
+}
+.hero-pre::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: clamp(70px, 13vh, 150px);
+  background: linear-gradient(to bottom, transparent 0%, rgba(20, 17, 15, .65) 60%, var(--bg) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero {
+  margin-top: 5px; /* clear the gold accent strip below hero-pre */
 }
 
 /* ===== Hero ===== */
