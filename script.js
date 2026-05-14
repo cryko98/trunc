@@ -115,22 +115,13 @@
     counters.forEach((el) => cio.observe(el));
   }
 
-  // ===== Memes rail: drag-to-scroll =====
-  const rail = document.getElementById('memesRail');
-  if (rail) {
-    let isDown = false, startX = 0, scrollLeft = 0;
-    rail.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX - rail.offsetLeft;
-      scrollLeft = rail.scrollLeft;
-    });
-    rail.addEventListener('mouseleave', () => { isDown = false; });
-    rail.addEventListener('mouseup', () => { isDown = false; });
-    rail.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - rail.offsetLeft;
-      rail.scrollLeft = scrollLeft - (x - startX) * 1.2;
+  // ===== Memes auto-scroll: duplicate children for seamless loop =====
+  const memesTrack = document.getElementById('memesTrack');
+  if (memesTrack) {
+    Array.from(memesTrack.children).forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      memesTrack.appendChild(clone);
     });
   }
 

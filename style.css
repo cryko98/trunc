@@ -733,41 +733,48 @@ button { font: inherit; }
   letter-spacing: 0.15em;
 }
 
-/* ===== Memes ===== */
+/* ===== Memes (auto-scroll marquee) ===== */
 .memes { background: var(--bg); padding-left: 0; padding-right: 0; }
 .memes .container { padding: 0 28px; }
-.memes__hint {
-  margin-top: 14px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  color: rgba(245, 235, 221, .5);
-  text-transform: uppercase;
+.memes__strip {
+  overflow: hidden;
+  padding: 60px 0 80px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
-.memes__rail {
+.memes__track {
   display: flex;
   gap: 44px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 60px 6vw 80px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--rust) rgba(245, 235, 221, .05);
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
+  width: max-content;
+  padding: 0 22px;
+  animation: memeScroll 55s linear infinite;
+  will-change: transform;
 }
-.memes__rail:active { cursor: grabbing; }
-.memes__rail::-webkit-scrollbar { height: 8px; }
-.memes__rail::-webkit-scrollbar-track { background: rgba(245, 235, 221, .05); }
-.memes__rail::-webkit-scrollbar-thumb { background: var(--rust); }
-.memes__rail .poster {
-  flex: 0 0 320px;
-  scroll-snap-align: center;
+.memes__track:hover { animation-play-state: paused; }
+@keyframes memeScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.memes__track .poster {
+  flex: 0 0 300px;
   user-select: none;
+  transition: transform .35s var(--easing), box-shadow .35s var(--easing);
 }
-.memes__rail .poster img { pointer-events: none; }
+.memes__track .poster img { pointer-events: none; }
+.memes__track .poster:hover {
+  transform: scale(1.1) translateY(-8px) rotate(0deg);
+  z-index: 5;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.4),
+    20px 24px 0 rgba(0,0,0,.55),
+    20px 24px 44px rgba(0,0,0,.7);
+}
 .poster--tilt-1 { transform: rotate(-2deg); }
 .poster--tilt-2 { transform: rotate(1.5deg); }
 .poster--tilt-3 { transform: rotate(-3deg); }
+@media (prefers-reduced-motion: reduce) {
+  .memes__track { animation: none; }
+}
 
 /* ===== Roadmap ===== */
 .roadmap { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); position: relative; }
@@ -999,8 +1006,10 @@ button { font: inherit; }
   .stat { padding: 20px 18px; }
 
   .memes .container { padding: 0 22px; }
-  .memes__rail { padding: 44px 7vw 60px; gap: 32px; }
-  .memes__rail .poster { flex: 0 0 78vw; }
+  .memes__strip { padding: 44px 0 60px; }
+  .memes__track { gap: 28px; animation-duration: 45s; }
+  .memes__track .poster { flex: 0 0 220px; }
+  .memes__track .poster:hover { transform: scale(1.06) translateY(-4px) rotate(0deg); }
   .poster { padding: 14px 14px 42px; }
 
   .marquee span { font-size: 26px; }
