@@ -8,7 +8,7 @@ Pure HTML + CSS + vanilla JS. No frameworks, no build step. Open `index.html` an
 - `index.html` — markup
 - `style.css` — all styles
 - `script.js` — copy-to-clipboard, mobile nav, drag-scroll memes, konami easter egg
-- `logo.jpg`, `banner.jpg`, `trunc*.jpg` — assets
+- `logo.jpg`, `banner1.png`, `trun.png`, `trunc*.jpg` — assets
 
 ## Before launch (TODO)
 1. Replace the placeholder contract address (`xxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) in:
