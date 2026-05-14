@@ -115,8 +115,8 @@
     counters.forEach((el) => cio.observe(el));
   }
 
-  // ===== Hero feature image: subtle tilt-on-scroll =====
-  const heroFeature = document.querySelector('.hero__feature-frame');
+  // ===== Hero portrait: subtle tilt-on-scroll =====
+  const heroFeature = document.querySelector('.hero__portrait-frame');
   if (heroFeature && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let ticking = false;
     const onScroll = () => {

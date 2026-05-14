@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown" />
+<link rel="preload" href="fonts/Pricedown.woff" as="font" type="font/woff" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;900&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="style.css" />
@@ -67,28 +67,27 @@
   <div class="hero__deco" aria-hidden="true"></div>
 
   <div class="hero__content">
-    <div class="hero__head">
-      <span class="hero__kicker" data-reveal>VICE CITY · SOLANA · 2026</span>
-      <h1 class="hero__title" data-reveal>
-        <span class="hero__line hero__line--1">UNCLE</span>
-        <span class="hero__line hero__line--2">TRUNC</span>
-      </h1>
-      <p class="hero__tag" data-reveal>The original troll uncle. Cigars in one hand, candles in the other.</p>
-    </div>
-
-    <figure class="hero__feature" data-reveal>
-      <div class="hero__feature-frame">
-        <img src="banner.jpg" alt="Uncle Trunc reclining on a beach chair at sunset with a cigar and a cocktail" />
-        <span class="hc hc--tl" aria-hidden="true"></span>
-        <span class="hc hc--tr" aria-hidden="true"></span>
-        <span class="hc hc--bl" aria-hidden="true"></span>
-        <span class="hc hc--br" aria-hidden="true"></span>
+    <div class="hero__layout">
+      <div class="hero__text">
+        <span class="hero__kicker" data-reveal>VICE CITY · SOLANA · 2026</span>
+        <h1 class="hero__title" data-reveal>
+          <span class="hero__line hero__line--1">UNCLE</span>
+          <span class="hero__line hero__line--2">TRUNC</span>
+        </h1>
+        <p class="hero__tag" data-reveal>The original troll uncle. Cigars in one hand, candles in the other.</p>
       </div>
-      <figcaption>
-        <span>FEATURE PRESENTATION</span>
-        <span>SIDE A · VOL. 01</span>
-      </figcaption>
-    </figure>
+
+      <figure class="hero__portrait" data-reveal>
+        <div class="hero__portrait-frame">
+          <img src="logo.jpg" alt="Uncle Trunc portrait" />
+          <span class="hc hc--tl" aria-hidden="true"></span>
+          <span class="hc hc--tr" aria-hidden="true"></span>
+          <span class="hc hc--bl" aria-hidden="true"></span>
+          <span class="hc hc--br" aria-hidden="true"></span>
+        </div>
+        <figcaption>UNCLE TRUNC · PORTRAIT</figcaption>
+      </figure>
+    </div>
 
     <div class="hero__bar" data-reveal>
       <div class="ca-box">
@@ -109,6 +108,27 @@
     </div>
   </div>
 </header>
+
+<!-- Banner Showcase -->
+<section class="showcase">
+  <div class="container">
+    <div class="showcase__head" data-reveal>
+      <span class="section__eyebrow">Now Showing</span>
+    </div>
+    <figure class="showcase__frame" data-reveal>
+      <img src="banner.jpg" alt="Uncle Trunc reclining on a beach chair at sunset with a cigar and cocktail" loading="lazy" />
+      <span class="hc hc--tl" aria-hidden="true"></span>
+      <span class="hc hc--tr" aria-hidden="true"></span>
+      <span class="hc hc--bl" aria-hidden="true"></span>
+      <span class="hc hc--br" aria-hidden="true"></span>
+    </figure>
+    <div class="showcase__caption" data-reveal>
+      <span>Uncle Trunc in</span>
+      <strong>"Vice City Sunset"</strong>
+      <span>A Solana Original · 2026</span>
+    </div>
+  </div>
+</section>
 
 <!-- Marquee Ticker -->
 <div class="marquee" aria-hidden="true">
