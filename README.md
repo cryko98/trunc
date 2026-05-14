@@ -1,6 +1,6 @@
 # 🌴 TRUNC — The Troll Uncle Memecoin
 
-GTA Vice City–style landing page for **$TRUNC**, a Solana memecoin.
+Editorial poster-style landing page for **$TRUNC**, a Solana memecoin.
 
 Pure HTML + CSS + vanilla JS. No frameworks, no build step. Open `index.html` and it runs.
 

@@ -1,5 +1,5 @@
 /* ========================================
-   TRUNC — Editorial GTA poster
+   TRUNC — Editorial poster
    ======================================== */
 
 @font-face {
@@ -262,14 +262,14 @@ button { font: inherit; }
 }
 .hero__layout {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  grid-template-areas: "text portrait";
-  gap: 56px;
+  grid-template-columns: 1.05fr 1fr;
+  grid-template-areas: "text character";
+  gap: 40px;
   align-items: center;
   margin-bottom: 56px;
 }
 .hero__text { grid-area: text; }
-.hero__portrait { grid-area: portrait; }
+.hero__character { grid-area: character; }
 
 .hero__kicker {
   display: inline-block;
@@ -304,46 +304,40 @@ button { font: inherit; }
   line-height: 1.3;
 }
 
-/* Hero portrait (logo) */
-.hero__portrait {
-  margin: 0;
-  animation: portraitFloat 6s ease-in-out infinite alternate;
-}
-@keyframes portraitFloat {
-  0%   { transform: translateY(0) rotate(-1deg); }
-  100% { transform: translateY(-8px) rotate(0deg); }
-}
-.hero__portrait-frame {
+/* Hero character (full-figure, frameless) */
+.hero__character {
   position: relative;
-  background: var(--ink);
-  border: 3px solid var(--cream);
-  box-shadow:
-    14px 14px 0 0 var(--rust),
-    14px 14px 40px rgba(0, 0, 0, .55);
-  overflow: hidden;
-  transition: transform .4s var(--easing), box-shadow .4s var(--easing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: characterFloat 6s ease-in-out infinite alternate;
 }
-.hero__portrait-frame:hover {
-  transform: translate(-3px, -3px);
-  box-shadow:
-    18px 18px 0 0 var(--rust),
-    18px 18px 50px rgba(0, 0, 0, .65);
+.hero__character::before {
+  content: '';
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  width: 60%;
+  height: 30px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, .55) 0%, transparent 70%);
+  transform: translateX(-50%);
+  filter: blur(8px);
+  pointer-events: none;
 }
-.hero__portrait-frame img {
+@keyframes characterFloat {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+.hero__character img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  max-width: 560px;
+  height: auto;
   display: block;
-  filter: contrast(1.05) saturate(1.08);
-}
-.hero__portrait figcaption {
-  margin-top: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.3em;
-  color: rgba(245, 235, 221, .55);
-  text-transform: uppercase;
-  text-align: center;
+  position: relative;
+  z-index: 1;
+  filter:
+    drop-shadow(0 14px 28px rgba(0, 0, 0, .55))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, .4));
 }
 
 /* Corner brackets (shared) */
@@ -947,10 +941,10 @@ button { font: inherit; }
 
   .hero__layout {
     grid-template-columns: 1fr;
-    grid-template-areas: "text" "portrait";
-    gap: 40px;
+    grid-template-areas: "text" "character";
+    gap: 28px;
   }
-  .hero__portrait { max-width: 420px; margin: 0 auto; width: 100%; }
+  .hero__character { max-width: 380px; margin: 0 auto; width: 100%; }
   .showcase__frame { box-shadow: 12px 12px 0 0 var(--rust), 12px 12px 40px rgba(0,0,0,.6); }
 }
 
@@ -982,8 +976,8 @@ button { font: inherit; }
   .hero__title { font-size: clamp(60px, 16vw, 120px); }
   .hero__line--2 { margin-left: 6vw; }
   .hero__tag { font-size: 17px; }
-  .hero__layout { margin-bottom: 40px; gap: 32px; }
-  .hero__portrait-frame { border-width: 2px; box-shadow: 8px 8px 0 0 var(--rust), 8px 8px 24px rgba(0,0,0,.55); }
+  .hero__layout { margin-bottom: 40px; gap: 24px; }
+  .hero__character { max-width: 320px; }
   .hc { width: 18px; height: 18px; border-width: 2px; }
   .hc--tl, .hc--tr { top: 8px; } .hc--tl, .hc--bl { left: 8px; }
   .hc--tr, .hc--br { right: 8px; } .hc--bl, .hc--br { bottom: 8px; }

@@ -115,27 +115,6 @@
     counters.forEach((el) => cio.observe(el));
   }
 
-  // ===== Hero portrait: subtle tilt-on-scroll =====
-  const heroFeature = document.querySelector('.hero__portrait-frame');
-  if (heroFeature && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const rect = heroFeature.getBoundingClientRect();
-        const vh = window.innerHeight;
-        if (rect.bottom > 0 && rect.top < vh) {
-          const progress = 1 - (rect.top + rect.height / 2) / vh;
-          const tilt = Math.max(-3, Math.min(3, progress * 3));
-          heroFeature.style.transform = `perspective(1200px) rotateX(${tilt * 0.6}deg)`;
-        }
-        ticking = false;
-      });
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-
   // ===== Memes rail: drag-to-scroll =====
   const rail = document.getElementById('memesRail');
   if (rail) {
